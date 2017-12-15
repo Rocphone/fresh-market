@@ -18,7 +18,7 @@ SEAN = '+13057266671'
 
     def ivr_welcome
       welcome = 'Welcome To Fresh Market in Coconut Grove'
-      message = 'Please listen to the following options, as our menu has changed. For Customer service, press 1. Meat department, press 1. Produce, 3. Flowers, 4. To speak with a Manager, 5.'
+      message = 'Please listen to the following options, as our menu has changed. For Customer service, press 1. Meat department, press 2. Produce, 3. Flowers, 4. To speak with a Manager, 5.'
       response = Twilio::TwiML::VoiceResponse.new do |r|
         r.gather numDigits: '1', action: menu_path do |g|
           g.say welcome, voice: 'female', language: 'en-GB'
